@@ -11,8 +11,8 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-var modelName
-var duration
+var modelName = "XYZ";
+var duration = 0;
 
 
 
@@ -29,12 +29,13 @@ var duration
        // INSERT YOUR CODE HERE
 function recalculate(){
     let costLabel = document.getElementById("calculated-cost");
-    if (modelName = "XYZ"){
-
+    let newCost = 0;
+    if (modelName === "XYZ"){
+        newCost = duration * 100
     }else{
-
+        newCost = duration * 213
     }
-           
+    costLabel.innerHTML = newCost.toFixed(2)
 }
 
 
@@ -51,10 +52,10 @@ function recalculate(){
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-    modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
 var modelButton =  document.getElementById("model-button");
+modelButton.addEventListener("click", changeModel);
 function changeModel(){
     let modelText = document.getElementById("model-text");
     if (modelName === "XYZ"){
@@ -62,10 +63,9 @@ function changeModel(){
     } else {
         modelName = "XYZ";
     }
-    modelText.innerHTML = "Model " + modelName
+    modelText.innerHTML = "Model " + modelName;
     recalculate();
 }
-
 
 
 
@@ -83,6 +83,13 @@ function changeModel(){
 */
 
 // INSERT YOUR CODE HERE
-
+var durationButton = document.getElementById("duration-button");
+durationButton.addEventListener("click", changeDuration);
+function changeDuration(){
+    let durationText = document.getElementById("duration-text");
+    duration = parseInt(prompt("Enter a duration: "));
+    durationText.innerHTML = duration;
+    recalculate();
+}
 
 
