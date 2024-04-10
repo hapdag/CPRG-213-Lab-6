@@ -31,11 +31,11 @@ function recalculate(){
     let costLabel = document.getElementById("calculated-cost");
     let newCost = 0;
     if (modelName === "XYZ"){
-        newCost = duration * 100
+        newCost = duration * 100;
     }else{
-        newCost = duration * 213
+        newCost = duration * 213;
     }
-    costLabel.innerHTML = newCost.toFixed(2)
+    costLabel.innerHTML = newCost.toFixed(2);
 }
 
 
