@@ -54,7 +54,7 @@ function recalculate(){
     modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
-var switchModel =  document.getElementById("model-button");
+var modelButton =  document.getElementById("model-button");
 function changeModel(){
     let modelText = document.getElementById("model-text");
     if (modelName === "XYZ"){
